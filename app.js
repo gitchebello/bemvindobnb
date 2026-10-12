@@ -89,7 +89,7 @@ function transportBlock(d){
   return '<div class="cards">'+DATA.transport.map(function(m){
     var t = d.trans[m.id];
     return '<article class="card">'+
-      '<div class="card__top"><span class="card__pic">'+ART.pic[m.il]+'</span>'+
+      '<div class="card__top"><span class="card__pic">'+(ART.pic[m.il]||'')+'</span>'+
       '<div class="card__ti"><h4>'+t.h+'</h4>'+(t.tag ? '<div class="sub">'+t.tag+'</div>' : '')+'</div></div>'+
       '<p class="desc">'+t.d+'</p></article>';
   }).join("")+'</div>';
