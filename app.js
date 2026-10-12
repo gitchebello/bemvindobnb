@@ -260,14 +260,14 @@ function phonesBlock(d){
   }).join("")+'</div>';
 }
 
-/* ---------- mapa de verdade (Leaflet + OpenStreetMap) ---------- */
+/* ---------- mapa: imagens fixas com os pinos (base © OpenStreetMap) ---------- */
 function mapBlock(d){
   return '<div class="mapwrap">'+
     '<div class="mapbar">'+
       '<button type="button" class="mapbtn on" data-zoom="near">'+ART.ic.pin+d.lbl.near+'</button>'+
       '<button type="button" class="mapbtn" data-zoom="city">'+ART.ic.map+d.lbl.city+'</button>'+
     '</div>'+
-    '<div id="leaf" class="leaf" role="region" aria-label="'+d.lbl.mapAria+'"></div>'+
+    '<div class="mapimg"><img id="mapImg" src="img/mapa-perto.jpg" alt="'+d.lbl.mapAria+'" width="2000" height="1522"></div>'+
     '<div class="legend">'+
       '<i><span class="dot" style="background:#FF6B4A"></span>'+d.mapLegend[0]+'</i>'+
       '<i><span class="dot" style="background:#F2B33D"></span>'+d.mapLegend[1]+'</i>'+
@@ -281,52 +281,15 @@ function mapBlock(d){
     '</div></div>';
 }
 
-var LMAP = null;
 function initMap(d){
-  if(LMAP){ LMAP.remove(); LMAP = null; }
-  var el = document.getElementById("leaf");
-  if(!el || !window.LF) { if(el) el.innerHTML = '<iframe class="osm" loading="lazy" title="Map" src="https://maps.google.com/maps?q='+CFG.lat+','+CFG.lng+'&z=15&output=embed"></iframe>'; return; }
-  var Lf = window.LF;
-  var home = [CFG.lat, CFG.lng];
-  LMAP = Lf.map(el, {scrollWheelZoom:false, tap:true}).setView(home, 16);
-  Lf.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(LMAP);
-
-  function pin(ll, cls, emoji, html, z){
-    var icon = Lf.divIcon({className:"", html:'<span class="mpin '+cls+'">'+emoji+'</span>', iconSize:[34,34], iconAnchor:[17,17], popupAnchor:[0,-16]});
-    return Lf.marker(ll, {icon:icon, zIndexOffset:z||0}).addTo(LMAP).bindPopup(html);
-  }
-  function pop(name, sub, q){
-    return '<strong>'+name+'</strong>'+(sub?'<br><span>'+sub+'</span>':'')+
-      '<br><a href="'+MAPS+encodeURIComponent(q)+'" target="_blank" rel="noopener">'+d.lbl.openmaps+' ›</a>';
-  }
-
-  var all = [home];
-  DATA.attractions.forEach(function(a){
-    pin(a.ll, "mpin--sight", "★", '<img src="'+a.img+'" alt="" class="mpop__img">'+pop(a.name, d.attr[a.id].s, a.map+", Rio de Janeiro"));
-    all.push(a.ll);
-  });
-  DATA.hospitals.forEach(function(h){ pin(h.ll, "mpin--hosp", "+", pop(h.name, h.addr, h.map)); });
-  pin(DATA.sus.ll, "mpin--hosp", "+", pop(DATA.sus.name+" (SUS)", DATA.sus.addr, DATA.sus.map));
-  pin(DATA.caju.ll, "mpin--food", "🍹", pop(DATA.caju.name, d.caju.k, DATA.caju.map), 500);
-  [["Metrô Cardeal Arcoverde", [-22.96382,-43.18137]], ["Metrô Siqueira Campos", [-22.96620,-43.18640]]].forEach(function(m){
-    pin(m[1], "mpin--metro", "M", pop(m[0], "", m[0]+", Rio de Janeiro"));
-  });
-  pin(home, "mpin--home", "🏠", '<strong>'+d.mapLegend[0]+'</strong><br><span>'+CFG.addressShort+' · '+CFG.apt+'</span>', 1000).openPopup();
-
-  var cityBounds = Lf.latLngBounds(all.filter(function(p){ return p[1] > -43.3; }));
+  var img = document.getElementById("mapImg");
   var bar = document.querySelectorAll(".mapbtn");
   [].forEach.call(bar, function(btn){
     btn.addEventListener("click", function(){
       [].forEach.call(bar, function(x){ x.classList.toggle("on", x === btn); });
-      if(btn.getAttribute("data-zoom") === "city") LMAP.flyToBounds(cityBounds, {padding:[30,30], duration:.8});
-      else LMAP.flyTo(home, 16, {duration:.8});
+      if(img) img.src = btn.getAttribute("data-zoom") === "city" ? "img/mapa-cidade.jpg" : "img/mapa-perto.jpg";
     });
   });
-  /* rolar a página sem prender no mapa; zoom com dois dedos / ctrl */
-  el.addEventListener("wheel", function(e){ if(e.ctrlKey || e.metaKey) LMAP.scrollWheelZoom.enable(); else LMAP.scrollWheelZoom.disable(); }, {passive:true});
 }
 
 /* ================= RENDER ================= */
