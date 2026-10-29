@@ -246,7 +246,7 @@ body::after{
 @media (max-width:560px){
   .hero__tag{bottom:-22px;left:16px;right:16px;width:fit-content;margin-inline:auto;transform:none;padding:8px 18px 8px 14px;border-radius:18px;gap:10px}
   .hero__tag svg{width:22px;height:22px}
-  .hero__tagtx{flex-direction:column;gap:1px;line-height:1.2}
+  .hero__tagtx{flex-direction:column;align-items:center;text-align:center;gap:1px;line-height:1.2}
   .hero__tagtx span{font-size:12px;font-weight:700;opacity:.92}
   .hero__tagtx span::before{content:none}
   .hero__art{margin-bottom:10px}
