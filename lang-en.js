@@ -358,7 +358,7 @@ sections:[
   {t:"h", x:"The request has two parts"},
   {t:"ol", x:[
     "<strong>During your stay:</strong> if something is missing or not working, message me. A blown bulb, the shower, a question.",
-    "<strong>At the end:</strong> say what you enjoyed, what you used and what was missing. Specific comments like “the bed is great”, “the Wi-Fi handled my calls” or “the guide really helped” are worth far more than “all fine”.",
+    "<strong>Specific comments</strong> like “the bed is great”, “the Wi-Fi handled my calls” or “the guide really helped” are worth far more than “all fine”.",
     "<strong>If you can, add a photo.</strong> Photos from real guests are what help most when someone is choosing where to stay."
   ]},
   {t:"note", k:"ok", x:"You have <strong>14 days after check-out</strong> to leave a review. I review you too, and I promise to be fair and kind. Thank you very much for choosing my home. Come back soon! 🇧🇷"}

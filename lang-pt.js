@@ -369,7 +369,7 @@ sections:[
   {t:"h", x:"O pedido tem duas partes"},
   {t:"ol", x:[
     "<strong>Durante a estadia:</strong> se faltar alguma coisa ou algo não funcionar, me mande mensagem. Lâmpada queimada, chuveiro, dúvida.",
-    "<strong>No fim:</strong> conte o que você gostou, o que usou e o que faltou. Comentários específicos como “a cama é ótima”, “o Wi-Fi aguentou minhas reuniões” ou “o guia ajudou muito” valem bem mais do que um “tudo ok”.",
+    "<strong>Comentários específicos</strong> como “a cama é ótima”, “o Wi-Fi aguentou minhas reuniões” ou “o guia ajudou muito” valem bem mais do que um “tudo ok”.",
     "<strong>Se puder, coloque uma foto.</strong> Foto de hóspede de verdade é o que mais ajuda quem está escolhendo onde ficar."
   ]},
   {t:"note", k:"ok", x:"Você tem <strong>14 dias depois da saída</strong> para avaliar. Eu também avalio você, e prometo ser justo e gentil. Muito obrigado por escolher a minha casa. Volte sempre! 🇧🇷"}

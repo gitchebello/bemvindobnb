@@ -358,7 +358,7 @@ sections:[
   {t:"h", x:"La petición tiene dos partes"},
   {t:"ol", x:[
     "<strong>Durante la estancia:</strong> si falta algo o no funciona, escríbeme. Una bombilla fundida, la ducha, una duda.",
-    "<strong>Al final:</strong> cuenta qué te gustó, qué usaste y qué faltó. Comentarios concretos como “la cama es genial”, “el Wi-Fi aguantó mis reuniones” o “la guía ayudó mucho” valen mucho más que un “todo bien”.",
+    "<strong>Comentarios concretos</strong> como “la cama es genial”, “el Wi-Fi aguantó mis reuniones” o “la guía ayudó mucho” valen mucho más que un “todo bien”.",
     "<strong>Si puedes, añade una foto.</strong> Las fotos de huéspedes reales son lo que más ayuda a quien está eligiendo dónde alojarse."
   ]},
   {t:"note", k:"ok", x:"Tienes <strong>14 días después de la salida</strong> para valorar. Yo también te valoro a ti, y prometo ser justo y amable. Muchas gracias por elegir mi casa. ¡Vuelve pronto! 🇧🇷"}
