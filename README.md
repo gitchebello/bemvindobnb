@@ -2,6 +2,8 @@
 
 Site-guia para os hóspedes do apartamento no Airbnb em Copacabana, Rio de Janeiro, em português, inglês e espanhol. Tem mapa do bairro, restaurantes e bares por perto, farmácia 24h, transporte, como usar a TV e os eletrodomésticos, regras da casa e um minijogo.
 
+**No ar:** https://gitchebello.github.io/bemvindobnb/
+
 ## Rodar
 
 Não há build. Abra o `index.html` no navegador ou sirva a pasta:

@@ -79,6 +79,7 @@ gallery:{
 quick:[
   {ic:"door",  k:"Seu apartamento", x:"<b>AP "+CFG.aptShort+" · "+CFG.floor+" andar</b><br>Saindo do elevador, fica à <b>esquerda</b>."},
   {ic:"lock",  k:"Chegando", x:"Porta com <b>senha</b>, sem chaves."},
+  {ic:"bolt",  k:"Energia 110V", x:"Todas as tomadas da casa são <b>110V</b>. Confira seus aparelhos antes de ligar."},
   {ic:"water", k:"Água de beber", x:"Só a do <b>filtro</b> (normal, fria ou gelada)."},
   {ic:"beach", k:"Voltando da praia?", x:"Entre pela <b>entrada dos fundos</b> do prédio, você encontrará uma duchinha para retirar o excesso de areia."},
   {ic:"music", k:"Bem em frente", x:"O <b>Caju</b>, bar com samba e feijoada, fica do outro lado da rua."}
@@ -104,9 +105,9 @@ tv:{
     "Pegue o <strong>controle do Roku</strong> e aperte a <strong>casinha ⌂</strong>. Aparece a tela inicial com os aplicativos.",
     "Com as <strong>setas</strong>, escolha Netflix, Prime Video, YouTube, Globoplay… e aperte <strong>OK</strong>. Ou use a voz: <strong>segure o botão do microfone 🎤</strong> e fale o nome do aplicativo.",
     "Para voltar uma tela, aperte a <strong>setinha ←</strong> (no alto, ao lado da casinha). Ela sai do filme para a lista, fecha menus e volta para onde você estava.",
-    "O <strong>Globoplay</strong> e o <strong>Stremio</strong> (se você sabe do que eu estou falando ;) ) já estão logados e são da casa: pode assistir à vontade. É no <strong>Globoplay</strong> que dá para ver a <strong>Globo ao vivo</strong>. Os outros serviços por assinatura (Netflix, Prime Video, Disney+ etc.) <strong>são por conta de cada hóspede</strong>, com a sua própria conta.",
+    "O <strong>Globoplay</strong> já está logado e é da casa: pode assistir à vontade. É no <strong>Globoplay</strong> que dá para ver a <strong>Globo ao vivo</strong>. Os outros serviços por assinatura (Netflix, Prime Video, Disney+ etc.) <strong>são por conta de cada hóspede</strong>, com a sua própria conta.",
     "Para entrar na sua conta, escolha “Entrar” no aplicativo. Muitos mostram um <strong>código ou QR code</strong>: abra no celular e confirme, sem precisar digitar senha na TV.",
-    "Antes de ir embora, <strong>saia das suas contas</strong> em cada aplicativo (o Globoplay e o Stremio são da casa, pode deixar)."
+    "Antes de ir embora, <strong>saia das suas contas</strong> em cada aplicativo (o Globoplay é da casa, pode deixar)."
   ],
   lost:"<strong>Se perdeu?</strong> Aperte a <strong>casinha ⌂</strong> do controle para voltar ao início e recomeçar.",
   tip:"<strong>Tela preta?</strong> Aperte o <strong>⏻</strong> do controle Roku apontando para a TV. <strong>O controle não responde?</strong> Confira as pilhas ou tire a TV da tomada por 10 segundos e ligue de novo. Tem <strong>pilhas extras na gaveta embaixo da TV</strong>."
@@ -200,7 +201,7 @@ sections:[
   {t:"h", x:"O que fazer antes de ir embora"},
   {t:"ul", x:[
     "Feche as janelas. Desligue o ar condicionado, as luzes e a TV.",
-    "Saia das suas contas na TV (Netflix, Prime, YouTube…), para ninguém usar depois. O Globoplay e o Stremio são da casa: pode deixar logados.",
+    "Saia das suas contas na TV (Netflix, Prime, YouTube…), para ninguém usar depois. O Globoplay é da casa: pode deixar logado.",
     "Feche a porta e confira se ela trancou.",
     "Me mande uma mensagem avisando que saiu."
   ]}
@@ -216,6 +217,7 @@ sections:[
   {t:"h", x:"Como usar as coisas da casa"},
   {t:"kv", x:[
     ["sofa",  "Sofá-cama", "O sofá da sala é um <strong>sofá-cama</strong>. Para abrir:", "sofa"],
+    ["bolt",  "Energia: 110V", "<strong>A energia da casa inteira é 110V</strong>, em todas as tomadas. Antes de ligar secador, chapinha, barbeador ou carregador trazido de fora, confira na etiqueta se ele aceita 110V (bivolt ou “100–240V” funciona). Aparelho só 220V liga fraco ou não liga."],
     ["bulb",  "Luz da sala", "Procurando o interruptor? Ele fica <strong>atrás da porta</strong>."],
     ["window", "Janelas: trava de segurança", "As janelas têm <strong>travas de segurança</strong> como esta da foto, na lateral. Elas seguram a janela: <strong>sempre que abrir uma janela, confira se a trava está segurando</strong>. Sem a trava, <strong>a janela pode cair</strong>.", "trava"],
     ["blind", "Blackout", "<strong>Todas as janelas têm cortina blackout</strong>, que bloqueia a luz de fora. Ótimo para dormir até mais tarde."],
@@ -227,7 +229,6 @@ sections:[
     ["pot", "Cozinha", "Tem <strong>cooktop</strong>, geladeira, liquidificador, forno de micro-ondas, air fryer, chaleira elétrica (só para aquecer água) e cafeteira. Açúcar e sal são por conta da casa.<br><br>Os <strong>utensílios</strong> ficam no armário; os <strong>talheres</strong> e os <strong>panos de prato</strong>, nas gavetas. Tudo isso é da casa: use à vontade, mas <strong>não leve com você</strong>."],
     ["flame", "Cooktop", "O cooktop fica na cozinha. Para acender uma boca:", "cooktop"],
     ["fridge", "Frigobar", "Além da geladeira da cozinha, tem um <strong>frigobar no quarto</strong>."],
-    ["faucet", "Pia da cozinha", "A torneira tem dois registros: <strong>Q (quente)</strong> à esquerda e <strong>F (fria)</strong> à direita. Atenção: eles funcionam <strong>ao contrário</strong> do costume. Para <strong>abrir, gire para a direita</strong>; para fechar, gire para a esquerda.", "sink"],
     ["laundry", "Área de serviço", "Tem <strong>tanque</strong>, <strong>varal</strong> e <strong>vassouras</strong> para você usar à vontade."],
     ["lift", "Elevadores", "São dois. Use o de serviço para malas, compras e na volta da praia."],
     ["trash", "Lixo", "Feche o saco e leve até a escada. Separe assim:", "trash"]

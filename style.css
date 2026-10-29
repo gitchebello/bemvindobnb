@@ -240,6 +240,17 @@ body::after{
   background:var(--coral);color:#fff;font-weight:800;font-size:13.5px;padding:9px 16px;border-radius:999px;
   box-shadow:var(--sh-m);white-space:nowrap}
 .hero__tag svg{width:18px;height:18px;flex:none}
+.hero__tagtx{display:flex;gap:.35em}
+.hero__tagtx b{font-weight:800}
+.hero__tagtx span::before{content:"·";margin-right:.35em}
+@media (max-width:560px){
+  .hero__tag{bottom:-22px;left:16px;right:16px;width:fit-content;margin-inline:auto;transform:none;padding:8px 18px 8px 14px;border-radius:18px;gap:10px}
+  .hero__tag svg{width:22px;height:22px}
+  .hero__tagtx{flex-direction:column;gap:1px;line-height:1.2}
+  .hero__tagtx span{font-size:12px;font-weight:700;opacity:.92}
+  .hero__tagtx span::before{content:none}
+  .hero__art{margin-bottom:10px}
+}
 @media (max-width:900px){.hero__art img{aspect-ratio:16/10;border-radius:var(--r-xl)}}
 .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
 .chip{display:inline-flex;align-items:center;gap:8px;background:var(--paper);border:1.5px solid var(--line);
@@ -332,6 +343,7 @@ footer::before{animation-duration:40s;animation-direction:reverse}
 .foot__il.foot__il--ava{display:grid;place-items:center;width:auto;flex:none}
 .foot__il.foot__il--ava .ava{flex:none;width:130px;height:130px;max-width:none}
 .foot__bio{margin-bottom:10px;font-style:italic}
+@media (max-width:900px){.sos__lb{flex:1 1 100%}}
 @media (max-width:560px){.sos__in{padding-inline:16px}.sosbtn{min-width:100%}}
 
 /* ---------------- Menu ---------------- */
@@ -435,7 +447,6 @@ footer::before{animation-duration:40s;animation-direction:reverse}
 .tap{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:96px;padding:10px 14px 9px;
   border-radius:var(--r);border:1.5px solid var(--line);background:var(--cream)}
 .tap svg{width:60px;height:60px;margin-bottom:4px}
-.taps--sink .tap svg{width:84px;height:142px;margin-bottom:8px}
 .tap b{font-size:15px;font-weight:900;line-height:1.2}
 .tap span{font-size:12.5px;color:var(--muted);line-height:1.2}
 .taps,.tap{box-sizing:border-box}
@@ -649,7 +660,9 @@ footer{position:relative;overflow:hidden;margin-top:0;padding:48px 0 60px;isolat
 /* ---------------- Essenciais (logo abaixo do topo) ---------------- */
 .quick{margin-top:-6px;padding-top:26px;padding-bottom:6px;position:relative;z-index:2}
 .quick__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media (min-width:901px){.quick__grid>.qcard:last-child:nth-child(3n+1){grid-column:1/-1}}
 @media (max-width:900px){.quick__grid{grid-template-columns:1fr 1fr}}
+@media (min-width:561px) and (max-width:900px){.quick__grid>.qcard:last-child:nth-child(odd){grid-column:1/-1}}
 .qcard{display:flex;gap:12px;align-items:flex-start;background:var(--paper);border:1.5px solid var(--line);border-radius:20px;
   padding:15px 16px;box-shadow:var(--sh-s)}
 .qcard__ic{width:42px;height:42px;flex:none;border-radius:14px;display:grid;place-items:center;background:var(--mint-l);color:var(--teal-d)}

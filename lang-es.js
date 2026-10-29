@@ -79,6 +79,7 @@ gallery:{
 quick:[
   {ic:"door",  k:"Tu apartamento", x:"<b>Apto "+CFG.aptShort+" · 4.º piso</b><br>Al salir del ascensor, queda a la <b>izquierda</b>."},
   {ic:"lock",  k:"Al llegar", x:"Puerta con <b>código</b>, sin llaves."},
+  {ic:"bolt",  k:"Energía 110V", x:"Todos los enchufes de la casa son de <b>110V</b>. Revisa tus aparatos antes de enchufarlos."},
   {ic:"water", k:"Agua para beber", x:"Solo la del <b>filtro</b> (natural, fría o helada)."},
   {ic:"beach", k:"¿Vuelves de la playa?", x:"Entra por la <b>entrada de atrás</b> del edificio: allí encontrarás una duchita para quitarte el exceso de arena."},
   {ic:"music", k:"Justo enfrente", x:"El <b>Caju</b>, bar con samba y feijoada, está al otro lado de la calle."}
@@ -104,9 +105,9 @@ tv:{
     "Coge el <strong>mando del Roku</strong> y pulsa la <strong>casita ⌂</strong>. Aparece la pantalla de inicio con las aplicaciones.",
     "Con las <strong>flechas</strong>, elige Netflix, Prime Video, YouTube, Globoplay… y pulsa <strong>OK</strong>. O usa la voz: <strong>mantén pulsado el botón del micrófono 🎤</strong> y di el nombre de la aplicación.",
     "Para volver una pantalla, pulsa la <strong>flechita ←</strong> (arriba, al lado de la casita). Sale de la película a la lista, cierra menús y vuelve a donde estabas.",
-    "<strong>Globoplay</strong> y <strong>Stremio</strong> (si sabes de lo que hablo ;) ) ya tienen la sesión iniciada y son de la casa: míralos cuanto quieras. En <strong>Globoplay</strong> puedes ver <strong>TV Globo en vivo</strong>. Los demás servicios de suscripción (Netflix, Prime Video, Disney+, etc.) <strong>corren por cuenta de cada huésped</strong>, con su propia cuenta.",
+    "<strong>Globoplay</strong> ya tiene la sesión iniciada y es de la casa: míralo cuanto quieras. En <strong>Globoplay</strong> puedes ver <strong>TV Globo en vivo</strong>. Los demás servicios de suscripción (Netflix, Prime Video, Disney+, etc.) <strong>corren por cuenta de cada huésped</strong>, con su propia cuenta.",
     "Para entrar en tu cuenta, elige “Iniciar sesión” en la aplicación. Muchas muestran un <strong>código o QR</strong>: ábrelo en el móvil y confirma, sin escribir la contraseña en la tele.",
-    "Antes de irte, <strong>cierra sesión</strong> en cada aplicación (Globoplay y Stremio son de la casa, puedes dejarlos)."
+    "Antes de irte, <strong>cierra sesión</strong> en cada aplicación (Globoplay es de la casa, puedes dejarlo)."
   ],
   lost:"<strong>¿Te perdiste?</strong> Pulsa la <strong>casita ⌂</strong> del mando para volver al inicio y empezar de nuevo.",
   tip:"<strong>¿Pantalla negra?</strong> Pulsa <strong>⏻</strong> en el mando Roku apuntando a la tele. <strong>¿El mando no responde?</strong> Revisa las pilas o desenchufa la tele 10 segundos y vuelve a encenderla. Hay <strong>pilas de repuesto en el cajón debajo de la tele</strong>."
@@ -199,7 +200,7 @@ sections:[
   {t:"h", x:"Antes de irte"},
   {t:"ul", x:[
     "Cierra las ventanas. Apaga el aire acondicionado, las luces y la tele.",
-    "Cierra sesión en tus cuentas de la tele (Netflix, Prime, YouTube…) para que nadie las use después. Globoplay y Stremio son de la casa: déjalos con la sesión iniciada.",
+    "Cierra sesión en tus cuentas de la tele (Netflix, Prime, YouTube…) para que nadie las use después. Globoplay es de la casa: déjalo con la sesión iniciada.",
     "Cierra la puerta y comprueba que quedó trancada.",
     "Mándame un mensaje avisando que te fuiste."
   ]}
@@ -214,6 +215,7 @@ sections:[
   {t:"h", x:"Cómo usar las cosas de la casa"},
   {t:"kv", x:[
     ["sofa",  "Sofá cama", "El sofá del salón es un <strong>sofá cama</strong>. Para abrirlo:", "sofa"],
+    ["bolt",  "Energía: 110V", "<strong>Toda la casa funciona a 110V</strong>, en todos los enchufes. Antes de enchufar secador, plancha de pelo, afeitadora o cargador traído de fuera, mira la etiqueta: bivolt o “100–240V” funciona. Un aparato solo de 220V funciona débil o no enciende."],
     ["bulb",  "Luz del salón", "¿Buscas el interruptor? Está <strong>detrás de la puerta</strong>."],
     ["window", "Ventanas: traba de seguridad", "Las ventanas tienen <strong>trabas de seguridad</strong> como la de la foto, en el lateral. Sujetan la ventana: <strong>siempre que abras una ventana, comprueba que la traba la esté sujetando</strong>. Sin la traba, <strong>la ventana puede caerse</strong>.", "trava"],
     ["blind", "Blackout", "<strong>Todas las ventanas tienen cortina blackout</strong>, que bloquea la luz de fuera. Ideal para dormir hasta tarde."],
@@ -225,7 +227,6 @@ sections:[
     ["pot", "Cocina", "Hay <strong>placa de cocina (cooktop)</strong>, nevera, licuadora, microondas, freidora de aire, hervidor eléctrico (solo para calentar agua) y cafetera. El azúcar y la sal corren por cuenta de la casa.<br><br>Los <strong>utensilios</strong> están en el armario; los <strong>cubiertos</strong> y los <strong>paños de cocina</strong>, en los cajones. Son de la casa: úsalos libremente, pero <strong>no te los lleves</strong>."],
     ["flame", "Cooktop", "La placa (cooktop) está en la cocina. Para encender un fuego:", "cooktop"],
     ["fridge", "Minibar", "Además de la nevera de la cocina, hay un <strong>minibar (frigobar) en el cuarto</strong>."],
-    ["faucet", "Fregadero", "El grifo tiene dos llaves: <strong>Q (caliente)</strong> a la izquierda y <strong>F (fría)</strong> a la derecha. Atención: funcionan <strong>al revés</strong> de lo habitual. Para <strong>abrir, gira hacia la derecha</strong>; para cerrar, hacia la izquierda.", "sink"],
     ["laundry", "Lavadero", "Hay <strong>pila para lavar</strong>, <strong>tendedero</strong> y <strong>escobas</strong> para que uses cuando quieras."],
     ["lift", "Ascensores", "Hay dos. Usa el de servicio para maletas, compras y al volver de la playa."],
     ["trash", "Basura", "Cierra la bolsa y llévala a la escalera. Sepárala así:", "trash"]

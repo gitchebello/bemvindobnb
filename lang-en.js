@@ -79,6 +79,7 @@ gallery:{
 quick:[
   {ic:"door",  k:"Your flat", x:"<b>Flat "+CFG.aptShort+" · 4th floor</b><br>Coming out of the lift, it is on the <b>left</b>."},
   {ic:"lock",  k:"Arriving", x:"<b>Keypad</b> door, no keys."},
+  {ic:"bolt",  k:"Power is 110V", x:"Every socket in the flat is <b>110V</b>. Check your devices before plugging in."},
   {ic:"water", k:"Drinking water", x:"Only from the <b>filter</b> (room temperature, cool or ice-cold)."},
   {ic:"beach", k:"Back from the beach?", x:"Use the building's <b>back entrance</b> — there is a small shower there to rinse off the sand."},
   {ic:"music", k:"Right opposite", x:"<b>Caju</b>, a bar with samba and feijoada, is just across the street."}
@@ -104,9 +105,9 @@ tv:{
     "Pick up the <strong>Roku remote</strong> and press <strong>Home ⌂</strong>. The home screen with the apps appears.",
     "Use the <strong>arrows</strong> to choose Netflix, Prime Video, YouTube, Globoplay… and press <strong>OK</strong>. Or use your voice: <strong>hold the microphone button 🎤</strong> and say the name of the app.",
     "To go back one screen, press the <strong>little arrow ←</strong> (at the top, next to home). It takes you from a film back to the list, closes menus and returns to where you were.",
-    "<strong>Globoplay</strong> and <strong>Stremio</strong> (if you know what I mean ;) ) are already signed in and belong to the flat: watch as much as you like. <strong>Globoplay</strong> is where you can watch <strong>TV Globo live</strong>. Other subscription services (Netflix, Prime Video, Disney+ etc.) <strong>are up to each guest</strong>, using your own account.",
+    "<strong>Globoplay</strong> is already signed in and belongs to the flat: watch as much as you like. <strong>Globoplay</strong> is where you can watch <strong>TV Globo live</strong>. Other subscription services (Netflix, Prime Video, Disney+ etc.) <strong>are up to each guest</strong>, using your own account.",
     "To sign in, choose “Sign in” in the app. Many show a <strong>code or QR code</strong>: open it on your phone and confirm — no need to type a password on the TV.",
-    "Before you leave, <strong>sign out of your accounts</strong> in each app (Globoplay and Stremio belong to the flat, leave them)."
+    "Before you leave, <strong>sign out of your accounts</strong> in each app (Globoplay belongs to the flat, leave it)."
   ],
   lost:"<strong>Lost?</strong> Press the <strong>home ⌂</strong> button on the remote to go back to the start.",
   tip:"<strong>Black screen?</strong> Press <strong>⏻</strong> on the Roku remote, pointing it at the TV. <strong>Remote not responding?</strong> Check the batteries, or unplug the TV for 10 seconds and switch it on again. There are <strong>spare batteries in the drawer under the TV</strong>."
@@ -199,7 +200,7 @@ sections:[
   {t:"h", x:"Before you leave"},
   {t:"ul", x:[
     "Close the windows. Switch off the air conditioning, the lights and the TV.",
-    "Sign out of your TV accounts (Netflix, Prime, YouTube…) so no one else can use them. Globoplay and Stremio belong to the flat: leave them signed in.",
+    "Sign out of your TV accounts (Netflix, Prime, YouTube…) so no one else can use them. Globoplay belongs to the flat: leave it signed in.",
     "Close the door and check that it has locked.",
     "Send me a message to say you have left."
   ]}
@@ -214,6 +215,7 @@ sections:[
   {t:"h", x:"How things work"},
   {t:"kv", x:[
     ["sofa",  "Sofa bed", "The living room sofa is a <strong>sofa bed</strong>. To open it:", "sofa"],
+    ["bolt",  "Power: 110V", "<strong>The whole flat runs on 110V</strong>, in every socket. Before plugging in a hair dryer, straightener, shaver or charger from home, check its label: dual voltage or “100–240V” is fine. A 220V-only device will run weakly or not at all."],
     ["bulb",  "Living room light", "Looking for the switch? It is <strong>behind the door</strong>."],
     ["window", "Windows: safety latch", "The windows have <strong>safety latches</strong> like the one in the photo, on the side. They hold the window: <strong>whenever you open a window, check that the latch is holding it</strong>. Without the latch, <strong>the window can fall</strong>.", "trava"],
     ["blind", "Blackout", "<strong>Every window has a blackout curtain</strong> that blocks the light from outside. Great for sleeping in."],
@@ -225,7 +227,6 @@ sections:[
     ["pot", "Kitchen", "There is a <strong>cooktop</strong>, fridge, blender, microwave, air fryer, electric kettle (only for boiling water) and coffee maker. Sugar and salt are on the house.<br><br>The <strong>utensils</strong> are in the cupboard; the <strong>cutlery</strong> and <strong>tea towels</strong> are in the drawers. They belong to the flat: use them freely, but <strong>please do not take them with you</strong>."],
     ["flame", "Cooktop", "The cooktop is in the kitchen. To light a burner:", "cooktop"],
     ["fridge", "Mini fridge", "Besides the kitchen fridge, there is a <strong>mini fridge in the bedroom</strong>."],
-    ["faucet", "Kitchen sink", "The tap has two handles: <strong>Q (hot)</strong> on the left and <strong>F (cold)</strong> on the right. Heads up: they work <strong>the other way round</strong>. To <strong>open, turn to the right</strong>; to close, turn to the left.", "sink"],
     ["laundry", "Utility area", "There is a <strong>laundry sink</strong>, a <strong>clothes line</strong> and <strong>brooms</strong> for you to use."],
     ["lift", "Lifts", "There are two. Use the service lift for luggage, groceries and when coming back from the beach."],
     ["trash", "Rubbish", "Tie the bag and take it to the stairwell. Sort it like this:", "trash"]

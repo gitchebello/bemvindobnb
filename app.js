@@ -42,7 +42,7 @@ function block(b, d){
     case "ol":   return '<ol class="olist">'+b.x.map(function(i){return '<li><span>'+i+'</span></li>';}).join("")+'</ol>';
     case "kv":
       return '<dl class="kv">'+b.x.map(function(r){
-        return '<div><dt>'+ic(r[0])+'<span>'+r[1]+'</span></dt><dd>'+r[2]+(r[3]==="taps"?tapsBlock(d):r[3]==="trash"?trashBlock(d):r[3]==="sofa"?sofaBlock(d):r[3]==="sink"?sinkBlock(d):r[3]==="cooktop"?cooktopBlock(d):r[3]==="trava"?travaBlock(d):"")+'</dd></div>';
+        return '<div><dt>'+ic(r[0])+'<span>'+r[1]+'</span></dt><dd>'+r[2]+(r[3]==="taps"?tapsBlock(d):r[3]==="trash"?trashBlock(d):r[3]==="sofa"?sofaBlock(d):r[3]==="cooktop"?cooktopBlock(d):r[3]==="trava"?travaBlock(d):"")+'</dd></div>';
       }).join("")+'</dl>';
     case "note":
       return '<div class="note '+(b.k||"info")+'"><span class="note__ic">'+
@@ -92,14 +92,6 @@ function sofaBlock(d){
     return '<span class="flow__st"><span class="flow__il">'+ART.sofa[i]+'</span>'+
       '<b><span class="flow__n">'+(i+1)+'</span>'+st[0]+'</b><span class="flow__tx">'+st[1]+'</span></span>';
   }).join('<span class="flow__ar" aria-hidden="true"></span>')+'</span>';
-}
-
-/* ---------- pia da cozinha: registros em cruz Q (quente, esquerda) e F (fria, direita) ---------- */
-function sinkBlock(d){
-  return '<span class="taps taps--sink">'+
-    '<span class="tap tap--hot">'+ART.cross("#E2513A","Q",d.lbl.open,d.lbl.shut)+'<b>'+d.lbl.hot+'</b><span>'+d.lbl.left+'</span></span>'+
-    '<span class="tap tap--cold">'+ART.cross("#2F7FD6","F",d.lbl.open,d.lbl.shut)+'<b>'+d.lbl.cold+'</b><span>'+d.lbl.right+'</span></span>'+
-  '</span>';
 }
 
 /* ---------- cooktop: aperte, gire, acendeu ---------- */
@@ -393,8 +385,9 @@ function render(lang){
     '<p class="hero__lead">'+d.hero.lead+'</p>'+
     '<div class="chips">'+d.hero.chips.map(function(c){
       return '<span class="chip">'+ic(c.ic)+'<span>'+c.x+'</span></span>'; }).join("")+'</div>';
+  var tag = d.hero.photoTag.split(" · ");
   $("#heroArt").innerHTML = '<img src="img/copa.jpg" alt="'+d.hero.photoAlt+'">'+
-    '<span class="hero__tag">'+ART.ic.sun+d.hero.photoTag+'</span>';
+    '<span class="hero__tag">'+ART.ic.sun+'<span class="hero__tagtx"><b>'+tag[0]+'</b>'+(tag[1]?'<span>'+tag[1]+'</span>':'')+'</span></span>';
   $("#heroWave").innerHTML = wave("currentColor");
 
   /* faixa de emergência */
